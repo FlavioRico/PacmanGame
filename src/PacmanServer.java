@@ -1,6 +1,7 @@
-public class PacmanServer {
 
-    public static void main(String[] args) {
-        
+public class PacmanServer implements Pacman{
+
+    public static void main(String[] args){
+
     }
 }
