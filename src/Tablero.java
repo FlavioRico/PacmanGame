@@ -8,6 +8,7 @@
  *
  * @author alexis
  */
+ import java.util.Random;
 public class Tablero {
     int filas;
     int columnas;
@@ -20,6 +21,7 @@ public class Tablero {
         this.filas = rows;
         this.columnas = cols;
         matriz = new int[this.filas][this.columnas];
+        cargaCerezas();
 
     }
 
@@ -67,9 +69,15 @@ public class Tablero {
     }
 
     public void cargaCerezas () {
+        Random flag = new Random();
+        boolean estado;
         for (int i = 0; i < this.filas; i ++){
             for (int j = 0; j < this.columnas; j ++){
-
+                estado = flag.nextBoolean();
+                if(estado)
+                  matriz [i][j] = 1;
+                else
+                  matriz [i][j] = 0;
             }
         }
     }
