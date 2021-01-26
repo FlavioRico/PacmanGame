@@ -12,7 +12,9 @@ public class Jugador {
     int x, y;
     String nombre;
     double puntaje;
+    char avatar;
 
+    public Jugador(){}
     public int getX() {
         return x;
     }
@@ -43,5 +45,14 @@ public class Jugador {
 
     public void setPuntaje(double puntaje) {
         this.puntaje = puntaje;
+    }
+
+    public void setAvatar(int avatar){
+      this.avatar = (char) avatar;
+    }
+
+    public char getAvatar()
+    {
+      return avatar;
     }
 }

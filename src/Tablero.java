@@ -12,7 +12,7 @@
 public class Tablero {
     int filas;
     int columnas;
-    int [][]matriz;
+    char [][]matriz;
     int cerezas;
     Coordenadas c;
 
@@ -20,7 +20,8 @@ public class Tablero {
 
         this.filas = rows;
         this.columnas = cols;
-        matriz = new int[this.filas][this.columnas];
+        matriz = new char[this.filas][this.columnas];
+        this.cerezas = 0;
         cargaCerezas();
 
     }
@@ -44,11 +45,11 @@ public class Tablero {
         this.columnas = columnas;
     }
 
-    public int[][] getMatriz() {
+    public char[][] getMatriz() {
         return matriz;
     }
 
-    public void setMatriz(int[][] matriz) {
+    public void setMatriz(char[][] matriz) {
         this.matriz = matriz;
     }
 
@@ -74,10 +75,12 @@ public class Tablero {
         for (int i = 0; i < this.filas; i ++){
             for (int j = 0; j < this.columnas; j ++){
                 estado = flag.nextBoolean();
-                if(estado)
-                  matriz [i][j] = 1;
+                if(estado){
+                  matriz [i][j] = '1';
+                  cerezas += 1;
+                }
                 else
-                  matriz [i][j] = 0;
+                  matriz [i][j] = '0';
             }
         }
     }
