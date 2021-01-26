@@ -2,8 +2,10 @@ import java.rmi.RemoteException;
 
 public class PacmanServer implements Pacman{
 
-    public PacmanServer () {
+    Tablero tablero;
 
+    public PacmanServer () {
+        this.tablero = new Tablero(20, 20);
     }
 
     public static void main(String[] args){

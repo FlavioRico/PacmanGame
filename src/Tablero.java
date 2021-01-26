@@ -11,8 +11,17 @@
 public class Tablero {
     int filas;
     int columnas;
-    int matriz;
+    int [][]matriz;
+    int cerezas;
     Coordenadas c;
+
+    public Tablero(int rows, int cols) {
+
+        this.filas = rows;
+        this.columnas = cols;
+        matriz = new int[this.filas][this.columnas];
+
+    }
 
     public Tablero() {
     }
@@ -33,15 +42,35 @@ public class Tablero {
         this.columnas = columnas;
     }
 
-    public int getMatriz() {
+    public int[][] getMatriz() {
         return matriz;
     }
 
-    public void setMatriz(int matriz) {
+    public void setMatriz(int[][] matriz) {
         this.matriz = matriz;
     }
-    
-    
-    
-    
+
+    public Coordenadas getC() {
+        return c;
+    }
+
+    public void setC(Coordenadas c) {
+        this.c = c;
+    }
+
+    public int getCerezas(){
+        return this.cerezas;
+    }
+
+    public void setCerezas(int cerezas){
+        this.cerezas = cerezas;
+    }
+
+    public void cargaCerezas () {
+        for (int i = 0; i < this.filas; i ++){
+            for (int j = 0; j < this.columnas; j ++){
+
+            }
+        }
+    }
 }
